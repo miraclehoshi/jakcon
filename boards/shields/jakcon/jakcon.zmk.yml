@@ -1,6 +1,6 @@
 file_format: "1"
 id: jakcon
-name : Jakcon
+name : jakcon
 type: shield
 url: https://kivotos.kr/jakcon
 requires: [makerdiary_nrf52840_m2]
