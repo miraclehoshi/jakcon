@@ -1,0 +1,5 @@
+if JAKCON
+config ZMK_KEYBOARD_NAME
+    default "Jakcon"
+
+endif
