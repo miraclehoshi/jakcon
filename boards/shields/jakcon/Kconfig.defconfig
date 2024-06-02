@@ -1,5 +1,6 @@
 if JAKCON
+config USB_DEVICE_MANUFACTURER
+    default "Kivotos"
 config ZMK_KEYBOARD_NAME
-    default "jakcon"
-	
+    default "JAK CON"	
 endif

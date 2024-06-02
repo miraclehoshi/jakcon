@@ -2,18 +2,60 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+&sl {
+    release-after-ms = <10000>;
+};
+
+
 / {
+	combos {
+		compatible = "zmk,combos";
+		enter_setting {
+			timeout-ms = <75>;
+			key-positions = <1 15 18 22>;
+			layers = 0;
+			bindings = <&sl 1>;
+		};
+	};
+	behaviors {
+		rst: hw_reset {
+		compatible = "zmk,behavior-hold-tap";
+		#binding-cells = <2>;
+		flavor = "tap-preferred";
+		tapping-term-ms = <3000>;
+		quick-tap-ms = <-1>;
+		require-prior-idle-ms = <300>;
+		bindings = <&sys_reset>, <&bootloader>;
+		};
+		btc: bt_clear {
+		compatible = "zmk,behavior-hold-tap";
+		#binding-cells = <2>;
+		flavor = "tap-preferred";
+		tapping-term-ms = <3000>;
+		quick-tap-ms = <-1>;
+		require-prior-idle-ms = <300>;
+		bindings = <&bt>, <&bt>;
+		};
+	};
     keymap {
         compatible = "zmk,keymap";
 
+	//----------------------------------------------------------
+	// | 1 | 2 | 3 | 4 | 5 | 6 | 7 | q | w | e | r | t | y | u |
+	// | a | s | d | | f | g | h | j | | z | x | c | v | b | n |
+	//----------------------------------------------------------
+
         default_layer {
-//----------------------------------------------------------
-// | 1 | 2 | 3 | 4 | 5 | 6 | 7 | q | w | e | r | t | y | u |
-// | a | s | d | | g | h | j | z | | x | c | v | b | n | m |
             bindings = <
     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U
-    &bt BT_CLR   &sys_reset &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &bootloader   &kp X   &kp C   &kp V   &kp B   &kp N
+	&kp A   &kp S   &kp D       &kp F   &kp G   &kp H   &kp J       &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N
             >;
         };
+		hw_layer {
+			bindings = <
+	&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &btc BT_CLR BT_CLR_ALL &none &none &none &none &none &none &none &rst
+	&none &none &none  &none &none &none &none  &none &none &none &none &none &none
+			>;
+		};
     };
 };
