@@ -14,7 +14,7 @@
 			timeout-ms = <75>;
 			key-positions = <15 18 22>;
 			layers = <0>;
-			bindings = <&sl 1>;
+			bindings = <&mo 1>;
 		};
 	};
 	behaviors {
@@ -50,3 +50,5 @@
 		};
     };
 };
+
+z1afu111afzuuuzafuzfaufzaaazf
