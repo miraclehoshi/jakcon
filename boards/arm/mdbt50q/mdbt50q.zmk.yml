@@ -1,0 +1,10 @@
+file_format: "1"
+id: mdbt50q
+name: Raytec MDBT50Q
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://kivotos.kr/jakcon/mdbt50q
+exposes: [raytec_mdbt50q]

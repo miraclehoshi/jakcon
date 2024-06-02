@@ -18,5 +18,5 @@
 #
 ---
 include:
-  - board: nrf52840_m2
+  - board: mdbt50q
     shield: jakcon
