@@ -1,0 +1,10 @@
+file_format: "1"
+id: makerdiary_nrf52840_m3
+name: MakerDiary nRF52840 M.3
+type: interconnect
+url: https://wiki.makerdiary.com/nrf52840-m3/
+manufacturer: MakerDiary
+description: |
+  The MakerDiary nRF52840 M.3 module is a module using the M.3/NGFF form factor to expose a
+  large number of GPIO pins, allowing use of a variety of peripherals such using I2C, SPI,
+  etc.

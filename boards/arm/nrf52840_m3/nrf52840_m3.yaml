@@ -1,0 +1,15 @@
+identifier: nrf52840_m3
+name: Makerdiary nRF52840 M.3 module
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - adc
+  - usb_device
+  - ble
+  - ieee802154
+  - pwm
+  - watchdog
