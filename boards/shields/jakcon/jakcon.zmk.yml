@@ -3,6 +3,6 @@ id: jakcon
 name : jakcon
 type: shield
 url: https://kivotos.kr/jakcon
-requires: [makerdiary_nrf52840_m3]
+requires: [raytec_mdbt50q]
 features:
   - keys
