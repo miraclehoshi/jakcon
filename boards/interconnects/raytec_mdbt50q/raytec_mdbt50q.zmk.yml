@@ -1,0 +1,8 @@
+file_format: "1"
+id: raytec_mdbt50q
+name: Raytec MDBT50Q
+type: interconnect
+url: https://kivotos.kr/jakcon/mdbt50q
+manufacturer: Kivotos
+description: |
+    hello world

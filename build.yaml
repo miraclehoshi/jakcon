@@ -18,5 +18,5 @@
 #
 ---
 include:
-  - board: raytec_mdbt50q
+  - board: mdbt50q
     shield: jakcon
