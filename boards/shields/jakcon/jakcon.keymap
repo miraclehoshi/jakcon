@@ -12,7 +12,7 @@
 		compatible = "zmk,combos";
 		enter_setting {
 			timeout-ms = <75>;
-			key-positions = <1 15 18 22>;
+			key-positions = <15 18 22>;
 			layers = <0>;
 			bindings = <&sl 1>;
 		};
