@@ -23,7 +23,7 @@
 		#binding-cells = <2>;
 		flavor = "tap-preferred";
 		tapping-term-ms = <3000>;
-		quick-tap-ms = <-1>;
+		quick-tap-ms = <0>;
 		require-prior-idle-ms = <300>;
 		bindings = <&sys_reset>, <&bootloader>;
 		};
