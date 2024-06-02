@@ -27,15 +27,6 @@
 		require-prior-idle-ms = <300>;
 		bindings = <&sys_reset>, <&bootloader>;
 		};
-		btc: bt_clear {
-		compatible = "zmk,behavior-hold-tap";
-		#binding-cells = <2>;
-		flavor = "tap-preferred";
-		tapping-term-ms = <3000>;
-		quick-tap-ms = <-1>;
-		require-prior-idle-ms = <300>;
-		bindings = <&bt>, <&bt>;
-		};
 	};
     keymap {
         compatible = "zmk,keymap";
@@ -53,7 +44,7 @@
         };
 		hw_layer {
 			bindings = <
-	&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &btc BT_CLR BT_CLR_ALL &none &none &none &none &none &none &none &rst
+	&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &btc BT_CLR BT_CLR_ALL &none &none &none &none &none &none &none &rst 0 0
 	&none &none &none  &none &none &none &none  &none &none &none &none &none &none
 			>;
 		};
